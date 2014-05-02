@@ -8,7 +8,9 @@
         <title>Cherry Tree</title>
 
         <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800" rel="stylesheet">
-        <link href="less/styles.css" rel="stylesheet">
+        <link href="/less/styles.less" rel="stylesheet/less">
+
+        <script src="/utilities/less.js"></script>
 
     </head>
 

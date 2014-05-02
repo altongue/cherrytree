@@ -13,7 +13,11 @@ var tpl = {
                 if (index < names.length) {
                     loadTemplate(index);
                 } else {
-                    callback();
+                    console.log("Templates Loaded!");
+
+                    if (callback) {
+                        callback();
+                    }
                 }
             });
         }
