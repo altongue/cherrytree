@@ -1,16 +1,26 @@
 var CT = {
     loadTemplates: function(callback) {
-        var templates = ['cherry', 'welcome'];
+        var templates = ['cherry', 'welcome', 'editTree'];
         tpl.loadTemplates(templates, callback);
-    },
-
-    goHome: function() {
-        this.currentPage = new Home({el: $("#app")[0]});
-    },
-
-    app: new App()
-    
+    }
 };
 
-CT.loadTemplates(CT.goHome);
-console.log(CT.app);
+CT.loadTemplates(function() {
+    CT.app = new App();
+
+    CT.router = new Router();
+
+    CT.router.on("route:messRoute", function() {
+        CT.app.messAround();
+    });
+
+    CT.router.on("route:defaultRoute", function() {
+        CT.app.goHome();
+    });
+
+    CT.router.on("route:loginRoute", function() {
+        CT.app.goLogin();
+    });
+
+    Backbone.history.start();
+});

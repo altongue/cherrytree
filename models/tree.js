@@ -1,7 +1,10 @@
 // Trees act as collections, but do more than simple collections do
 
-var tree = Backbone.Model.extend({
-    initialize: function(models) {
-        
+var Tree = Backbone.Model.extend({
+    defaults: {
+        cherries: []
+    },
+    initialize: function(options) {
+        this.cherries = options.models;
     }
 });

@@ -1,3 +1,8 @@
 <div id="welcome">
-    <h1>Welcome</h1>
+    <h1 class="no-margin">Cherrytree</h1>
+    <ul class="home-nav">
+    <% navLinks.forEach(function(link) { %>
+        <li class="nav-item"><a href="<%= link.url %>"><%= link.title %></a></li>
+    <% }) %>
+    </ul>
 </div>

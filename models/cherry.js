@@ -2,5 +2,5 @@
 var Cherry = Backbone.Model.extend({
     defaults: {
         'value': 'cherry'
-    }     
+    }
 });
